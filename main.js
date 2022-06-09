@@ -1,3 +1,9 @@
+var dog= 0;
+var cat= 0;
+var tiger= 0;
+var lion= 0;
+
+
 function startClassification()
 {
     navigator.mediaDevices.getUserMedia({audio:true});
@@ -23,6 +29,8 @@ function gotResults(error,results) {
            img = document.getElementById('animal_image'); 
            if (results[0].label == "Barking") { img.src = 'bark.gif'; dog = dog+1; } 
            else if (results[0].label == "Meowing") { img.src = 'meow.gif'; cat = cat + 1; } 
+           else if (results[0].label == "ROARING") { img.src = 'lion-roar.gif'; lion = lion + 1; } 
+           else if (results[0].label == "ROARING") { img.src = 'Tiger.gif'; Tiger = Tiger + 1; } 
         else{ img.src = 'giphy.gif'; } } }
 
     
